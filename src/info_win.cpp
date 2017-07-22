@@ -171,12 +171,12 @@ int MainActionFromMenu()
 		if(i!=-1) return KE_SHIFT_F(i+1);
 		break;
 	    case 2:
-		for(j=0;j<10;j++) prmt[j]=beye_context().bin_format().prompt(i);
+		for(j=0;j<10;j++) prmt[j]=beye_context().bin_format().prompt(j);
 		i = lb.run(prmt,10," Select format-depended action: ",ListBox::Selective|ListBox::UseAcc,0);
 		if(i!=-1) return KE_ALT_F(i+1);
 		break;
 	    case 3:
-		for(j=0;j<10;j++) prmt[j]=beye_context().active_mode().prompt(i);
+		for(j=0;j<10;j++) prmt[j]=beye_context().active_mode().prompt(j);
 		i = lb.run(prmt,10," Select mode-depended action: ",ListBox::Selective|ListBox::UseAcc,0);
 		if(i!=-1) return KE_CTL_F(i+1);
 		break;
