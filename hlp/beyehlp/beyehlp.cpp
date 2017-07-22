@@ -176,7 +176,7 @@ bool __FASTCALL__ MyCallOut(const IniInfo& ini,any_t* data)
 	if(rc == false) throw std::runtime_error(std::string("Can not open ")+TEMPFNAME);
 	litem = bIn->flength();
 	sprintf(bhi.item_length,"%08lX",litem);
-	handle = ::open(COMPNAME,binary_stream::FO_READONLY | binary_stream::SO_DENYNONE);
+	handle = ::open(COMPNAME,binary_stream::FO_READONLY | binary_stream::SO_DENYNONE, 0644);
 	if(handle == -1) throw std::runtime_error(std::string("Can not open ")+ini.value);
 	litem = ::lseek(handle,0L,SEEK_END);
 	::close(handle);
