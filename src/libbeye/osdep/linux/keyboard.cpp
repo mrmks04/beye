@@ -295,7 +295,7 @@ static void __FASTCALL__ pushEvent(unsigned _event)
     }
 }
 
-static void __FASTCALL__ console_leave(int signum)
+static void console_leave(int signum)
 {
     UNUSED(signum);
     ioctl(in_fd, TCSETSW, &sattr);
@@ -304,7 +304,7 @@ static void __FASTCALL__ console_leave(int signum)
     signal(SIGUSR1, console_leave);
 }
 
-static void __FASTCALL__ console_enter(int signum)
+static void console_enter(int signum)
 {
     UNUSED(signum);
     ioctl(in_fd, KDSKBMODE, K_RAW);
@@ -519,7 +519,7 @@ int __FASTCALL__ __kbdGetShiftsKey()
     return shift_status;
 }
 
-void __FASTCALL__ __ReadNextEvent(int signum) {
+void __ReadNextEvent(int signum) {
     UNUSED(signum);
     ReadNextEvent();
 }
