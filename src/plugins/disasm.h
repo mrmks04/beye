@@ -260,6 +260,7 @@ namespace	usr {
 	DISASM_CPU_SPARC=9,  /**< indicates SUN Sparc disassembler */
 	DISASM_CPU_SH	=10, /**< indicates Hitachi SH disassembler */
 	DISASM_CPU_CRAY	=11, /**< indicates Cray disassembler */
+	DISASM_CPU_Z80	=12, /**< indicates Z80 disassembler */
 			    /* ... here may placed other constants!!! ... */
 	DISASM_DEFAULT	=0  /**< indicates unspecified disassembler: format default */
     };

@@ -7,7 +7,7 @@ DO_MAKE = @ for i in $(SUBDIRS); do $(MAKE) -C $$i $@ || exit; done
 DO_ALL  = @ for i in $(SUBDIRS); do $(MAKE) -C $$i all || exit; done
 
 LIBNAME = $(LIBPREFIX)disasm.a
-SUBDIRS = arm avr ix86 java ppc
+SUBDIRS = arm avr ix86 java ppc z80
 
 SRCS=data_disasm.cpp
 
@@ -33,7 +33,8 @@ $(LIBNAME): $(SUBDIRS) $(OBJS)
 	$(wildcard avr/*.o) \
 	$(wildcard ix86/*.o) \
 	$(wildcard java/*.o) \
-	$(wildcard ppc/*.o)
+	$(wildcard ppc/*.o) \
+	$(wildcard z80/*.o)
 
 clean:
 	$(DO_MAKE)

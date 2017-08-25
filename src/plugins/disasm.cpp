@@ -59,6 +59,7 @@ namespace	usr {
     extern const Disassembler_Info arm_disassembler_info;
     extern const Disassembler_Info ppc_disassembler_info;
     extern const Disassembler_Info java_disassembler_info;
+    extern const Disassembler_Info z80_disassembler_info;
 
 DisasmRet::DisasmRet()
 	:pro_clone(0)
@@ -105,6 +106,7 @@ DisMode::DisMode(BeyeContext& bc,const Bin_Format& b,binary_stream& h,TWindow& _
     list.push_back(&avr_disassembler_info);
     list.push_back(&arm_disassembler_info);
     list.push_back(&ppc_disassembler_info);
+    list.push_back(&z80_disassembler_info);
     CurrStrLenBuff = new unsigned char [main_wnd.height()];
     PrevStrLenAddr = new unsigned long [main_wnd.height()];
     dis_comments   = new char [Comm_Size];
